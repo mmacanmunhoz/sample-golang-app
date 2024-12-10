@@ -1,0 +1,15 @@
+global:
+  cloud: others
+  clusterName: macancluster
+  deploymentEnvironment: staging
+otelCollectorEndpoint: ""
+otelInsecure: false
+signozApiKey: ""
+presets:
+  otlpExporter:
+    enabled: true
+  loggingExporter:
+    enabled: false
+
+
+

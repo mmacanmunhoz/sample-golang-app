@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - name: optl-container-app
+        image: mmacanmunhoz/my-app-golang:4.0
+        ports:
+          - containerPort: 8091
+        env:
+          - name: OTEL_EXPORTER_OTLP_ENDPOINT
+            value: ""
+          - name: OTEL_SERVICE_NAME
+            value: ""
+          - name: INSECURE_MODE
+            value: ""
+          - name: OTEL_EXPORTER_OTLP_HEADERS
+            value: ""
+
+
