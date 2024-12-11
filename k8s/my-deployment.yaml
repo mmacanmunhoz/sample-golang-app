@@ -14,17 +14,15 @@ spec:
     spec:
       containers:
       - name: optl-container-app
-        image: mmacanmunhoz/my-app-golang:4.0
+        image:  mmacanmunhoz/my-app-golang:5.0
         ports:
           - containerPort: 8091
         env:
           - name: OTEL_EXPORTER_OTLP_ENDPOINT
             value: ""
-          - name: OTEL_SERVICE_NAME
+          - name: SERVICE_NAME
             value: ""
           - name: INSECURE_MODE
             value: ""
           - name: OTEL_EXPORTER_OTLP_HEADERS
             value: ""
-
-
