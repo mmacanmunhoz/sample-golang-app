@@ -19,7 +19,7 @@ spec:
         tls:
           insecure: false
         headers:
-          "signoz-ingestion-key": "<key>"
+          "signoz-ingestion-key": ""
     service:
       pipelines:
         traces:
